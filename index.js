@@ -22,11 +22,11 @@ app.use('/firm', firmRoutes)
 app.use('/product', productRoutes)
 app.use('/uploads', express.static('uploads'))
 
-app.use('/home',(req,res)=>{
+app.use('/',(req,res)=>{
     res.send("<h1>Welcome to home page</h1>")
 })
 
-const PORT = 4000
+const PORT = process.env.PORT || 4000
 
 app.listen(PORT,()=>{
     console.log(`Server started and running at ${PORT}`)
