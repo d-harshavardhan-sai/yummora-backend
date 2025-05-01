@@ -6,9 +6,11 @@ const vendorRoutes = require('./routes/vendorRoutes')
 const firmRoutes = require('./routes/firmRoutes')
 const productRoutes = require('./routes/productRoutes')
 const path = require('path')
+const cors = require('cors')
 
 const app = express()
 dotEnv.config()
+app.use(cors())
 
 
 mongoose.connect(process.env.MONGO_URI)

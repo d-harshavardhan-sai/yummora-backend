@@ -42,7 +42,8 @@ const addFirm = async(req,res)=>{
     return res.status(200).json({message: "Firm Added successfully"})
     } catch (error) {
         console.log(error)
-        res.status(500).json("Internal server error")
+        res.status(500).json({ error: error.message || "Internal Server Error" })
+
     }
 }
 
