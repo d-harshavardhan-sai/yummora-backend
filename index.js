@@ -24,7 +24,7 @@ app.use('/firm', firmRoutes)
 app.use('/product', productRoutes)
 app.use('/uploads', express.static('uploads'))
 
-app.use('/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send("<h1>Welcome to home page</h1>")
 })
 
